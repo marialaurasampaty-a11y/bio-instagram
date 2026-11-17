@@ -222,7 +222,7 @@ footer a{color:var(--navy2);font-weight:600;text-decoration:none}
 // ===== WHATSAPP DA DANIELA =====
 const WHATSAPP = "5566999560256";
 
-const link = m => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`;
+const link = m => `https://api.whatsapp.com/send?phone=${WHATSAPP}&text=${encodeURIComponent(m)}`;
 document.querySelectorAll('.wa').forEach(a=>{a.href=link(a.dataset.msg);a.target='_blank';a.rel='noopener'});
 
 const ov=document.getElementById('ov');
